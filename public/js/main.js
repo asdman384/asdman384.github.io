@@ -1,7 +1,7 @@
 $(window).mousemove(function(event) {
     var xPos = (event.clientX / $(window).width()) - 0.5,
         yPos = (event.clientY / $(window).height()) - 0.5;
-    TweenMax.to('#movetherag', 0.8, {
+    TweenMax.to('#movethemain', 0.8, {
         rotationY: 24 * xPos,
         rotationX: -12 * yPos,
         ease: Power1.easeOut
@@ -10,16 +10,16 @@ $(window).mousemove(function(event) {
 console.log(1);
 $(document).ready(function(event) {
     
-    TweenMax.set('#ragsmainimage', {
+    TweenMax.set('#mainimage', {
         transformStyle: "preserve-3d",
         transformOrigin: 'center center',
         perspective: 1300,
         z: 1
     });
-    TweenMax.set('.ragimage', {
+    TweenMax.set('.photo', {
         transformStyle: "preserve-3d"
     });
-    TweenMax.set('#movetherag', {
+    TweenMax.set('#movethemain', {
         transformStyle: "preserve-3d"
     })
     TweenMax.set('#rag-one', {
